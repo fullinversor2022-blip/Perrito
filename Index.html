@@ -2,219 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Super Bono de Bienvenida</title>
-  <style>
-    :root{
-      --bg1:#2b0b4a;
-      --bg2:#4b0077;
-      --accent:#ffd54a;
-      --green:#12c159;
-      --card:#1b0730;
-      --glass: rgba(255,255,255,0.04);
-      --text:#ffffff;
-      --muted: #cfcfe0;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg,var(--bg1) 0%, #3b0b6a 45%, #5a1e90 100%);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-      color:var(--text);
-    }
-
-    .container{
-      width:100%;
-      max-width:420px;
-    }
-
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.08));
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-      border: 1px solid rgba(255,255,255,0.03);
-    }
-
-    .top{
-      padding:28px 22px 18px;
-      text-align:center;
-    }
-
-    .avatar-wrap{
-      position:relative;
-      display:inline-block;
-      margin-top:-8px;
-    }
-
-    .avatar-ring{
-      width:144px;
-      height:144px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border:6px solid var(--accent);
-      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.03), rgba(0,0,0,0.06));
-    }
-
-    .avatar{
-      width:128px;
-      height:128px;
-      border-radius:50%;
-      object-fit:cover;
-      display:block;
-      margin:0;
-      background: #eee;
-      border-radius:50%;
-    }
-
-    .vip-badge{
-      position:absolute;
-      left:50%;
-      transform:translate(-50%, -50%);
-      top:0;
-      background:var(--accent);
-      color:#2b0b4a;
-      font-weight:700;
-      padding:6px 14px;
-      border-radius:20px;
-      border:3px solid rgba(0,0,0,0.12);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-      font-size:13px;
-    }
-
-    h1{
-      margin:18px 0 6px;
-      font-size:28px;
-      line-height:1.05;
-      text-transform:uppercase;
-      letter-spacing:1px;
-      font-weight:800;
-      color:var(--text);
-    }
-
-    p.lead{
-      margin:0;
-      color:var(--muted);
-      margin-top:6px;
-      font-size:15px;
-    }
-
-    .wa-btn{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      justify-content:center;
-      margin:18px auto 8px;
-      background: linear-gradient(180deg,var(--green), #0ea44b);
-      color:white;
-      font-weight:800;
-      padding:14px 18px;
-      border-radius:999px;
-      width:100%;
-      max-width:320px;
-      text-decoration:none;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.35);
-      transition: transform .12s ease, filter .12s ease;
-    }
-    .wa-btn:active{ transform: translateY(1px); }
-    .wa-icon{
-      width:22px;height:22px; flex-shrink:0;
-    }
-
-    .attention{
-      margin-top:10px;
-      color: #ffd86b;
-      font-weight:700;
-      font-size:13px;
-    }
-
-    .bottom-strip{
-      background: linear-gradient(180deg,#1c0330,#24033f);
-      padding:16px 18px;
-      display:flex;
-      gap:12px;
-      justify-content:space-between;
-      align-items:center;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    .col{
-      text-align:center;
-      flex:1;
-    }
-    .col .label{ color: #ffd54a; font-weight:700; font-size:13px; }
-    .col .value{ margin-top:6px; color:white; font-weight:800; font-size:18px; }
-
-    /* small decorative bottom border */
-    .footer-deco{
-      margin-top:14px;
-      border-radius:14px;
-      padding:12px;
-      border:1px solid rgba(255,255,255,0.03);
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-    }
-
-    /* responsive */
-    @media (max-width:420px){
-      h1{ font-size:22px; }
-      .avatar-ring{ width:120px;height:120px;border-width:5px; }
-      .avatar{ width:106px;height:106px; }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acceso VIP</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="container">
-    <section class="card" aria-label="Super bono de bienvenida">
-      <div class="top">
-        <div class="avatar-wrap" aria-hidden="true">
-          <div class="avatar-ring">
-            <!-- Cambia la ruta si tu imagen se llama distinto o está en otra carpeta -->
-            <img src="dog.png" alt="Perrito VIP" class="avatar" />
-          </div>
-          <div class="vip-badge">ACCESO VIP</div>
-        </div>
-
-        <h1>SUPER BONU$ DE<br>BIENVENIDA</h1>
-        <p class="lead">Escribinos apretando el botón de abajo</p>
-
-        <!-- WhatsApp: número +54 387 684 9509 -> wa.me/543876849509 -->
-        <a class="wa-btn" href="https://wa.me/543876849509" target="_blank" rel="noopener noreferrer">
-          <!-- simple icon SVG -->
-          <svg class="wa-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.52 3.48A11.9 11.9 0 0 0 12.02 0C5.42 0 .16 5.26.16 11.86c0 2.09.55 4.12 1.6 5.93L0 24l6.46-1.71c1.76 1 3.76 1.51 5.6 1.51 6.6 0 11.86-5.26 11.86-11.86 0-3.18-1.24-6.18-3.4-8.26z" fill="#fff" opacity="0.06"/>
-            <path d="M17.2 14.05c-.38-.19-2.28-1.12-2.63-1.25-.35-.13-.6-.19-.86.19-.26.38-1.05 1.25-1.28 1.51-.23.26-.46.29-.84.1-.38-.19-1.6-.59-3.05-1.87-1.13-1.02-1.88-2.28-2.1-2.66-.22-.38-.02-.59.16-.79.16-.16.35-.4.53-.6.18-.2.24-.35.36-.58.12-.23.06-.44-.03-.64-.09-.2-.86-2.08-1.18-2.85-.31-.76-.63-.65-.86-.66l-.74-.01c-.24 0-.63.09-.96.44-.33.35-1.25 1.22-1.25 2.97s1.28 3.45 1.45 3.69c.18.24 2.5 3.83 6.06 5.35 3.56 1.52 3.56.99 4.2.93.65-.07 2.1-.86 2.39-1.69.29-.82.29-1.53.2-1.69-.09-.16-.33-.26-.7-.45z" fill="#fff"/>
-          </svg>
-          WHATSAPP OFFICIAL
-        </a>
-
-        <div class="attention">ATENCIÓN Y RETIROS SIN LÍMITES LAS 24 HS</div>
+  <main class="page">
+    <header class="logo-wrap" aria-hidden="true">
+      <div class="logo-circle">
+        <img src="AC06FA27-2F07-4F88-865F-43A36F228144.png" alt="logo">
       </div>
+    </header>
 
-      <div class="bottom-strip" role="region" aria-label="Información de bono">
-        <div class="col">
-          <div class="label">BONO</div>
-          <div class="value">100%</div>
-        </div>
-        <div class="col">
-          <div class="label">Mínimo de CARG4</div>
-          <div class="value">$1.000</div>
-        </div>
-        <div class="col">
-          <div class="label">Mínimo de RETIRO</div>
-          <div class="value">$2.000</div>
-        </div>
-      </div>
+    <section class="content">
+      <p class="vip">ACCESO VIP EXCLUSIVO</p>
+
+      <h1 class="title">
+        ¡SUPER BONO EN TU<br/>PRIMER DEPOSITO!
+      </h1>
+
+      <h2 class="subtitle">RETIROS TODO EL DÍA</h2>
+
+      <p class="text">ESCRIBINOS APRETANDO EL BOTÓN DE ABAJO</p>
+
+      <a id="whatsappBtn" class="cta" 
+         href="https://wa.me/5493876849509" 
+         aria-label="Escribir por WhatsApp"
+         target="_blank">
+        ESCRIBINOS<br/>AL WHATSAPP
+      </a>
     </section>
-
-    <div class="footer-deco" aria-hidden="true"></div>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
