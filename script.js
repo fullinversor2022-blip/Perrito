@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function(){
   const btn = document.getElementById('whatsappBtn');
 
   // Reemplazá por tu número sin el +
-  const PHONE = '5493875120099'; // ej: 54911xxxxxxx
-  const TEXT = encodeURIComponent('Hola, quiero registrarme y obtener el bono en mi primer depósito.');
+  const PHONE = '5493876849509'; // ej: 54911xxxxxxx
+  const TEXT = encodeURIComponent('Hola, quiero registrarme y obtener el B0N0 en mi primer depósito.');
 
   btn.href = `https://wa.me/${PHONE}?text=${TEXT}`;
 
