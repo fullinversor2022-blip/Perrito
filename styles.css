@@ -1,45 +1,57 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #111, #222);
-    font-family: Arial, sans-serif;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+:raíz{
+  --bg:#050617;
+  --oro:#ffbd1f;
+  --verde:#14d86c;
+  --blanco:#ffffff;
 }
 
-.contenedor {
-    max-width: 350px;
-    padding: 20px;
+*{dimensionamiento de la caja:cuadro de borde;margen:0;relleno:0}
+HTML,cuerpo{altura:100%}
+cuerpo{
+  familia de fuentes: "Poppins",interfaz de usuario del sistema,-sistema apple, "Helvetica Neue",Arial;
+  fondo: gradiente lineal(180grados,#050617 0%, #060819 100%);
+  color:variedad(--blanco);
+  -suavizado de fuentes webkit:antialiasing;
+  -moz-osx-suavizado-de-fuentes:escala de grises;
 }
 
-.logo {
-    width: 180px;
-    border-radius: 12px;
-    margin-bottom: 20px;
+.página{
+  ancho máximo:420píxeles;
+  margen:0auto;
+  relleno:28píxeles 18píxeles 60píxeles;
+  alineación de texto:centro;
 }
 
-h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #ffdd57;
+.envoltura de logotipo{margen superior:6píxeles;margen inferior:14píxeles;mostrar:doblar;justificar-contenido:centro}
+.círculo de logotipo{
+  ancho:150píxeles;altura:150píxeles;radio del borde:999píxeles;
+  fondo: gradiente radial(circulo en50% 40%, RGBA(255,189,31,0.08),transparente35%), variedad(--oro);
+  mostrar:doblar;elementos de alineación:centro;justificar-contenido:centro;
+  sombra de caja:0 18píxeles 40píxeles RGBA(255,189,31,0.12), 0 2píxeles 8píxeles RGBA(0,0,0,0.6);
+  relleno:6píxeles;
 }
+.círculo de logotipo imagen{ancho:100%;altura:100%;ajuste de objetos:cubrir;radio del borde:999píxeles;mostrar:bloquear}
 
-p {
-    font-size: 18px;
-    margin-bottom: 20px;
+/* Textos */
+.personaje{peso de fuente:800;espaciado entre letras:1píxeles;margen inferior:6píxeles;tamaño de fuente:16píxeles}
+.título{tamaño de fuente:34píxeles;altura de línea:1.02;color:variedad(--oro);peso de fuente:900;margen:8píxeles 0 10píxeles}
+.subtitular{color:variedad(--verde);tamaño de fuente:28píxeles;peso de fuente:900;margen inferior:14píxeles}
+.texto{color:RGBA(255,255,255,0,88);peso de fuente:700;margen inferior:20píxeles}
+
+/* Botón */
+.cta{
+  mostrar:bloque en línea;ancho:92%;ancho máximo:380píxeles;relleno:20píxeles 18píxeles;radio del borde:60píxeles;
+  fondo: gradiente lineal(180grados,#1fe787,#0fb960);
+  color:variedad(--blanco);peso de fuente:900;tamaño de fuente:20píxeles;decoración de texto:ninguno;
+  sombra de caja:0 18píxeles 48píxeles RGBA(20,216,108,0,18),recuadro0 -6píxeles 18píxeles RGBA(0,0,0,0.08);
+  transición:transformar.14sfacilidad,sombra de caja.14sfacilidad;
+  altura de línea:1.05;
 }
+.cta:flotar{transformar:traducirY(-6píxeles);sombra de caja:0 30píxeles 80píxeles RGBA(20,216,108,0,22);}
 
-.whatsapp-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #25D366;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    font-size: 18px;
+/*Responsivo*/
+@medios de comunicación(ancho mínimo:900píxeles){
+  .página{acolchado superior:40píxeles}
+  .título{tamaño de fuente:40píxeles}
+  .subtitular{tamaño de fuente:34píxeles}
 }
