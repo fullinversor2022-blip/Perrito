@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -61,6 +60,25 @@
       fbq('track', 'Lead', {
         content_name: 'whatsapp_click'
       });
+    });
+  </script>
+
+  <!-- Script funcional de WhatsApp -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const btn = document.getElementById('whatsappBtn');
+
+      const PHONE = '5493876849509';
+      const TEXT = encodeURIComponent('Hola, quiero registrarme y obtener el BONO en mi primer depósito.');
+
+      btn.href = `https://wa.me/${PHONE}?text=${TEXT}`;
+
+      // animación de pulso
+      btn.animate([
+        { transform: 'translateY(0)' },
+        { transform: 'translateY(-6px)' },
+        { transform: 'translateY(0)' }
+      ], { duration: 2800, iterations: Infinity });
     });
   </script>
 
