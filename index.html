@@ -6,7 +6,7 @@
   <title>Acceso VIP</title>
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Meta Pixel Code (CORRECTAMENTE UBICADO) -->
+  <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -55,10 +55,12 @@
     </section>
   </main>
 
+  <!-- Evento Lead para WhatsApp -->
   <script>
-    // Evento cuando hacen click al botón de WhatsApp
     document.getElementById("whatsappBtn").addEventListener("click", function() {
-      fbq('track', 'Lead'); // Evento recomendado para casino
+      fbq('track', 'Lead', {
+        content_name: 'whatsapp_click'
+      });
     });
   </script>
 
