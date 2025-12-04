@@ -15,13 +15,13 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '845012404851487'); 
+    fbq('init', '1179340997486817');
     fbq('track', 'PageView');
   </script>
 
   <noscript>
     <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=845012404851487&ev=PageView&noscript=1"/>
+      src="https://www.facebook.com/tr?id=1179340997486817&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
 </head>
@@ -54,12 +54,20 @@
     </section>
   </main>
 
-  <!-- Evento Lead para WhatsApp -->
+  <!-- Eventos Meta Pixel -->
   <script>
     document.getElementById("whatsappBtn").addEventListener("click", function() {
+
+      // Evento Lead optimizado
       fbq('track', 'Lead', {
-        content_name: 'whatsapp_click'
+        event_name: 'whatsapp_lead'
       });
+
+      // Evento personalizado WhatsApp Button
+      fbq('trackCustom', 'WhatsAppButtonClick', {
+        button: 'whatsapp_main'
+      });
+
     });
   </script>
 
