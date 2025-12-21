@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Acceso VIP</title>
 
-  <!-- Redirección a los 5 segundos -->
-  <meta http-equiv="refresh" content="5; url=https://wa.me/5491168058196?text=Hola%2C%20quiero%20mi%20bony%20y%20una%20cuenta">
+  <!-- Redirección a los 7 segundos -->
+  <meta http-equiv="refresh" content="7; url=https://wa.me/5491165058196?text=Hola%2C%20quiero%20mi%20bony%20y%20una%20cuenta">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,12 +21,16 @@
       color: white;
     }
 
+    .container {
+      width: 100%;
+      max-width: 480px;
+      padding: 20px;
+    }
+
     .card {
-      width: 92%;
-      max-width: 420px; /* MÁS GRANDE */
       background: #1a062f;
       border-radius: 24px;
-      padding: 40px 25px; /* MÁS ESPACIO */
+      padding: 40px 25px;
       text-align: center;
       box-shadow: 0 0 40px rgba(0,0,0,0.7);
     }
@@ -42,7 +46,7 @@
     }
 
     h1 {
-      font-size: 28px; /* MÁS GRANDE */
+      font-size: 28px;
       margin: 10px 0 15px;
       line-height: 1.2;
     }
@@ -72,7 +76,7 @@
       border: none;
       border-radius: 60px;
       padding: 20px;
-      font-size: 22px; /* BOTÓN GRANDE */
+      font-size: 22px;
       font-weight: bold;
       width: 100%;
       animation: pulse 1.5s infinite;
@@ -86,33 +90,55 @@
     }
 
     .footer {
-      margin-top: 25px;
+      margin-top: 20px;
       font-size: 13px;
       color: #aaa;
+    }
+
+    /* IMAGEN DE JUEGOS */
+    .games {
+      margin-top: 25px;
+    }
+
+    .games img {
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <div class="vip">ACCESO VIP</div>
+  <div class="container">
 
-    <h1>SUPER BONUS DE BIENVENIDA</h1>
+    <div class="card">
+      <div class="vip">ACCESO VIP</div>
 
-    <div class="subtitle">
+      <h1>SUPER BONUS DE BIENVENIDA</h1>
+
+      <div class="subtitle">
+        Escribinos apretando el botón de abajo
+      </div>
+
+      <div class="redirect-text">
+        Redirigiendo a WhatsApp…
+      </div>
+
+      <button class="whatsapp-btn">
+        WhatsApp Oficial
+      </button>
+
+      <div class="footer">
+        Atención 24 hs · +18 Juego responsable
+      </div>
     </div>
 
-    <div class="redirect-text">
-      Redirigiendo a WhatsApp…
+    <!-- IMAGEN INFERIOR -->
+    <div class="games">
+      <img src="IMG_20251221_134036.jpg" alt="Juegos disponibles">
     </div>
 
-    <button class="whatsapp-btn">
-      WhatsApp Oficial
-    </button>
-
-    <div class="footer">
-      Atención 24 hs · +18 Juego responsable
-    </div>
   </div>
 
 </body>
