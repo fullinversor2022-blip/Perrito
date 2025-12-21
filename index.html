@@ -5,14 +5,19 @@
   <title>Acceso VIP</title>
 
   <!-- Redirección a los 7 segundos -->
-  <meta http-equiv="refresh" content="7; url=https://wa.me/5491168058196?text=Hola%2C%20quiero%20mi%20bony%20y%20una%20cuenta">
+  <meta http-equiv="refresh" content="7; url=https://wa.me/5491165058196?text=Hola%2C%20quiero%20mi%20bony%20y%20una%20cuenta">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      min-height: 100vh;
+      height: 100vh;              /* ocupa todo el alto */
+      overflow: hidden;           /* NO SCROLL */
       font-family: Arial, sans-serif;
       background: radial-gradient(circle at top, #4b1d8f, #120018);
       display: flex;
@@ -23,51 +28,58 @@
 
     .container {
       width: 100%;
-      max-width: 480px;
-      padding: 20px;
+      max-width: 420px;
+      height: 100vh;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* reparte todo */
     }
 
     .card {
       background: #1a062f;
-      border-radius: 24px;
-      padding: 40px 25px;
+      border-radius: 22px;
+      padding: 26px 22px;
       text-align: center;
-      box-shadow: 0 0 40px rgba(0,0,0,0.7);
+      box-shadow: 0 0 35px rgba(0,0,0,0.7);
     }
 
     .vip {
       display: inline-block;
-      padding: 8px 22px;
-      border-radius: 25px;
+      padding: 6px 18px;
+      border-radius: 20px;
       border: 1px solid #caa24d;
       color: #caa24d;
-      font-size: 15px;
-      margin-bottom: 20px;
+      font-size: 14px;
+      margin-bottom: 12px;
     }
 
     h1 {
-      font-size: 28px;
-      margin: 10px 0 15px;
+      font-size: 24px;
+      margin: 8px 0 10px;
       line-height: 1.2;
     }
 
     .subtitle {
-      font-size: 16px;
+      font-size: 14px;
       color: #cccccc;
-      margin-bottom: 30px;
+      margin-bottom: 16px;
     }
 
+    /* TEXTO REDIRECCIÓN DESTACADO */
     .redirect-text {
-      font-size: 20px;
-      color: #1db954;
-      margin-bottom: 30px;
-      animation: fade 1.5s infinite;
+      font-size: 22px;
+      font-weight: bold;
+      color: #1ed760;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(30, 215, 96, 0.9);
+      animation: pulseText 1.2s infinite;
     }
 
-    @keyframes fade {
-      0% { opacity: 0.4; }
-      50% { opacity: 1; }
-      100% { opacity: 0.4; }
+    @keyframes pulseText {
+      0% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.7; }
     }
 
     .whatsapp-btn {
@@ -75,36 +87,34 @@
       color: white;
       border: none;
       border-radius: 60px;
-      padding: 20px;
-      font-size: 22px;
+      padding: 16px;
+      font-size: 20px;
       font-weight: bold;
       width: 100%;
-      animation: pulse 1.5s infinite;
-      box-shadow: 0 0 25px rgba(29, 185, 84, 0.7);
+      animation: pulseBtn 1.5s infinite;
+      box-shadow: 0 0 22px rgba(29, 185, 84, 0.7);
     }
 
-    @keyframes pulse {
+    @keyframes pulseBtn {
       0% { transform: scale(1); }
-      50% { transform: scale(1.07); }
+      50% { transform: scale(1.06); }
       100% { transform: scale(1); }
     }
 
     .footer {
-      margin-top: 20px;
-      font-size: 13px;
+      margin-top: 14px;
+      font-size: 12px;
       color: #aaa;
     }
 
-    /* IMAGEN DE JUEGOS */
-    .games {
-      margin-top: 25px;
-    }
-
+    /* IMAGEN INFERIOR AJUSTADA */
     .games img {
       width: 100%;
+      max-height: 32vh;   /* entra en pantalla */
+      object-fit: cover;
       border-radius: 16px;
       display: block;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      box-shadow: 0 0 18px rgba(0,0,0,0.6);
     }
   </style>
 </head>
@@ -118,6 +128,7 @@
       <h1>SUPER BONUS DE BIENVENIDA</h1>
 
       <div class="subtitle">
+        Escribinos apretando el botón de abajo
       </div>
 
       <div class="redirect-text">
@@ -133,7 +144,6 @@
       </div>
     </div>
 
-    <!-- IMAGEN INFERIOR -->
     <div class="games">
       <img src="IMG_20251221_134036.jpg" alt="Juegos disponibles">
     </div>
