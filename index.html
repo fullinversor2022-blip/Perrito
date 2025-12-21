@@ -7,10 +7,12 @@
   <!-- Redirección a los 5 segundos -->
   <meta http-equiv="refresh" content="5; url=https://wa.me/5491165058196?text=Hola%2C%20quiero%20mi%20bony%20y%20una%20cuenta">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       font-family: Arial, sans-serif;
       background: radial-gradient(circle at top, #4b1d8f, #120018);
       display: flex;
@@ -20,44 +22,45 @@
     }
 
     .card {
-      width: 90%;
-      max-width: 380px;
+      width: 92%;
+      max-width: 420px; /* MÁS GRANDE */
       background: #1a062f;
-      border-radius: 20px;
-      padding: 30px 20px;
+      border-radius: 24px;
+      padding: 40px 25px; /* MÁS ESPACIO */
       text-align: center;
-      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      box-shadow: 0 0 40px rgba(0,0,0,0.7);
     }
 
     .vip {
       display: inline-block;
-      padding: 6px 18px;
-      border-radius: 20px;
+      padding: 8px 22px;
+      border-radius: 25px;
       border: 1px solid #caa24d;
       color: #caa24d;
-      font-size: 14px;
-      margin-bottom: 15px;
+      font-size: 15px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 26px;
-      margin: 10px 0;
+      font-size: 28px; /* MÁS GRANDE */
+      margin: 10px 0 15px;
+      line-height: 1.2;
     }
 
     .subtitle {
-      font-size: 15px;
+      font-size: 16px;
       color: #cccccc;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     .redirect-text {
-      font-size: 18px;
+      font-size: 20px;
       color: #1db954;
-      margin-bottom: 25px;
-      animation: dots 1.5s infinite;
+      margin-bottom: 30px;
+      animation: fade 1.5s infinite;
     }
 
-    @keyframes dots {
+    @keyframes fade {
       0% { opacity: 0.4; }
       50% { opacity: 1; }
       100% { opacity: 0.4; }
@@ -67,26 +70,25 @@
       background: linear-gradient(90deg, #1db954, #1ed760);
       color: white;
       border: none;
-      border-radius: 50px;
-      padding: 18px;
-      font-size: 20px;
+      border-radius: 60px;
+      padding: 20px;
+      font-size: 22px; /* BOTÓN GRANDE */
       font-weight: bold;
       width: 100%;
-      cursor: pointer;
       animation: pulse 1.5s infinite;
-      box-shadow: 0 0 20px rgba(29, 185, 84, 0.6);
+      box-shadow: 0 0 25px rgba(29, 185, 84, 0.7);
     }
 
     @keyframes pulse {
       0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+      50% { transform: scale(1.07); }
       100% { transform: scale(1); }
     }
 
     .footer {
-      margin-top: 20px;
-      font-size: 12px;
-      color: #999;
+      margin-top: 25px;
+      font-size: 13px;
+      color: #aaa;
     }
   </style>
 </head>
@@ -96,9 +98,14 @@
     <div class="vip">ACCESO VIP</div>
 
     <h1>SUPER BONUS DE BIENVENIDA</h1>
-    <div class="subtitle">Escribinos apretando el botón de abajo</div>
 
-    <div class="redirect-text">Redirigiendo a WhatsApp…</div>
+    <div class="subtitle">
+      Escribinos apretando el botón de abajo
+    </div>
+
+    <div class="redirect-text">
+      Redirigiendo a WhatsApp…
+    </div>
 
     <button class="whatsapp-btn">
       WhatsApp Oficial
