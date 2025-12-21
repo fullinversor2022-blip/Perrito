@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Redireccionando a WhatsApp</title>
+  <title>Redireccionando</title>
 
-  <!-- Redirección luego de 3 segundos -->
-  <meta http-equiv="refresh" content="3; url=https://wa.me/5491165058196?text=Hola%2C%20quiero%20mi%20bony%20y%20una%20cuenta">
+  <!-- Redirección luego de 5 segundos -->
+  <meta http-equiv="refresh" content="5; url=https://wa.me/5491165058196?text=Hola%2C%20quiero%20mi%20bony%20y%20una%20cuenta">
 
   <style>
     body {
@@ -18,13 +18,28 @@
       font-family: Arial, sans-serif;
     }
 
-    h2 {
-      color: #1db954; /* verde tipo WhatsApp */
-      font-size: 24px;
+    .loading-text {
+      font-size: 26px;
+      color: #1db954; /* verde WhatsApp */
+    }
+
+    .dots::after {
+      content: '';
+      animation: dots 1.5s infinite;
+    }
+
+    @keyframes dots {
+      0% { content: ''; }
+      25% { content: '.'; }
+      50% { content: '..'; }
+      75% { content: '...'; }
+      100% { content: ''; }
     }
   </style>
 </head>
 <body>
-  <h2>Redireccionando a WhatsApp…</h2>
+  <div class="loading-text">
+    Redireccionando a Whatsapp<span class="dots"></span>
+  </div>
 </body>
 </html>
