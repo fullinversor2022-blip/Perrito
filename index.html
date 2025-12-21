@@ -1,95 +1,30 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Acceso VIP</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Redireccionando a WhatsApp</title>
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1179340997486817');
-    fbq('track', 'PageView');
-  </script>
+  <!-- Redirección luego de 3 segundos -->
+  <meta http-equiv="refresh" content="3; url=https://wa.me/5491165058196?text=Hola%2C%20quiero%20mi%20bony%20y%20una%20cuenta">
 
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1179340997486817&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      color: #1db954; /* verde tipo WhatsApp */
+      font-size: 24px;
+    }
+  </style>
 </head>
-
 <body>
-  <main class="page">
-    <header class="logo-wrap" aria-hidden="true">
-      <div class="logo-circle">
-        <img src="IMG-20251125-WA0000.jpg" alt="logo">
-      </div>
-    </header>
-
-    <section class="content">
-      <p class="vip">ACCESO VIP EXCLUSIVO</p>
-
-      <h1 class="title">
-        ¡SUPER BONO EN TU<br/>PRIMER DEPOSITO!
-      </h1>
-
-      <h2 class="subtitle">RETIROS TODO EL DÍA</h2>
-
-      <p class="text">ESCRIBINOS APRETANDO EL BOTÓN DE ABAJO</p>
-
-      <a id="whatsappBtn" class="cta" 
-         href="https://wa.me/5493876849509" 
-         aria-label="Escribir por WhatsApp"
-         target="_blank">
-        ESCRIBINOS<br/>AL WHATSAPP
-      </a>
-    </section>
-  </main>
-
-  <!-- Eventos Meta Pixel -->
-  <script>
-    document.getElementById("whatsappBtn").addEventListener("click", function() {
-
-      // Evento Lead optimizado
-      fbq('track', 'Lead', {
-        event_name: 'whatsapp_lead'
-      });
-
-      // Evento personalizado WhatsApp Button
-      fbq('trackCustom', 'WhatsAppButtonClick', {
-        button: 'whatsapp_main'
-      });
-
-    });
-  </script>
-
-  <!-- Script funcional de WhatsApp -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      const btn = document.getElementById('whatsappBtn');
-
-      const PHONE = '5493876849509';
-      const TEXT = encodeURIComponent('Hola, quiero registrarme y obtener el BONO en mi primer depósito.');
-
-      btn.href = `https://wa.me/${PHONE}?text=${TEXT}`;
-
-      // animación de pulso
-      btn.animate([
-        { transform: 'translateY(0)' },
-        { transform: 'translateY(-6px)' },
-        { transform: 'translateY(0)' }
-      ], { duration: 2800, iterations: Infinity });
-    });
-  </script>
-
-  <script src="script.js"></script>
+  <h2>Redireccionando a WhatsApp…</h2>
 </body>
 </html>
